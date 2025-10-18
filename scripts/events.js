@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         category: document.getElementById("category").value,
       };
 
-      const res = await fetch("http://localhost/studentboard/backend/add_event.php", {
+      const res = await fetch("https://studentboard-api.onrender.com/backend/add_event.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newEvent),
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 🔹 Function to load and display events
   async function loadEvents() {
     try {
-      const res = await fetch("http://localhost/studentboard/backend/get_events.php");
+      const res = await fetch("https://studentboard-api.onrender.com/backend/get_events.php");
       const data = await res.json();
       console.log("Events data:", data);
 
