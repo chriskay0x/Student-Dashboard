@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     container.innerHTML = "<p>Loading announcements...</p>";
 
     try {
-      const res = await fetch("http://localhost/studentboard/backend/get_announcements.php");
+      const res = await fetch("https://studentboard-api.onrender.com/backend/get_announcements.php");
       const data = await res.json();
       console.log("Fetched data:", data);
 
