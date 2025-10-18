@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementById("resultsContainer");
 
   try {
-    const res = await fetch("http://localhost/studentboard/backend/get_results.php");
+    const res = await fetch("https://studentboard-api.onrender.com/backend/get_results.php");
     const data = await res.json();
     console.log("Results data:", data);
 
