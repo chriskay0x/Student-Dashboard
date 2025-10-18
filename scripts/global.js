@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!confirmLogout) return;
 
         try {
-          const res = await fetch("http://localhost/studentboard/backend/logout.php");
+          const res = await fetch("https://studentboard-api.onrender.com/backend/logout.php");
           const data = await res.json();
           console.log(data.message);
         } catch (err) {
