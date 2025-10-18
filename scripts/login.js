@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       // Send login request to PHP backend
-      const res = await fetch("http://localhost/studentboard/backend/login.php", {
+      const res = await fetch("https://studentboard-api.onrender.com/backend/login.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
