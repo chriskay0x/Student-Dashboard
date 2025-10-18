@@ -1,0 +1,45 @@
+
+.page-container {
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h2 {
+  font-size: 2rem;
+  color: #004080;
+}
+
+/* Mission / Vision layout */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.about-card h3 {
+  color: #004080;
+  margin-bottom: 0.8rem;
+}
+
+
+
+/* Mobile full-screen nav */
+@media (max-width: 768px) {
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+}

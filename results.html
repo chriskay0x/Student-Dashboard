@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | Student Information Board</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/results.css">
+    <link rel="icon" href="./images/naitlogo.jpg">
+    <script src="./scripts/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (reuse navbar) -->
+    <header class="site-header" id="mainHeader">
+        <div class="logo">Dept. of IFT</div>
+
+        <!-- Hamburger for Mobile -->
+        <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="navbar" id="navbarMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
+            <li><a href="results.html" class="active">Results</a></li>
+
+            <!-- Auth Buttons -->
+            <li><a href="login.html" class="login-btn">Login</a></li>
+            <li><a href="#" class="logout-btn" style="display: none;">Logout</a></li>
+
+        </ul>
+        </nav>
+    </header>
+
+    <!-- <main class="page-container">
+        <div class="page-header">
+            <h2>Check Your Results</h2>
+            <p>Enter your details to view your academic results</p>
+        </div>
+
+        <form class="result-form" id="resultForm">
+            <div class="form-group">
+            <label for="studentId">Matric Number</label>
+            <input type="text" id="studentId" placeholder="Enter your matric number" required>
+            </div>
+            <button type="submit" class="btn">Check Results</button>
+        </form>
+
+        <!-- Placeholder for results -->
+        <!-- <table class="result-table">
+            <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Grade</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>CIT306</td>
+                <td>Web Design & Programming</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CIT304</td>
+                <td>Database Systems</td>
+                <td>B</td>
+            </tr>
+            </tbody>
+        </table>
+    </main>  -->
+
+    <main class="page-container">
+        <div class="page-header">
+            <h2>Your Academic Results</h2>
+            <p>View your semester results below.</p>
+        </div>
+
+        <div id="resultsContainer" class="results-table">
+            <p>Loading your results...</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Department of IT, FUTO</p>
+    </footer>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (!user) {
+            alert("Please log in first.");
+            window.location.href = "login.html";
+        }
+    </script>
+    <script src="./scripts/global.js" defer></script>
+    <script src="./scripts/results.js" defer></script>
+</body>
+</html>

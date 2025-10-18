@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements | Student Information Board</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/admin.css" />
+    <link rel="icon" href="./images/naitlogo.jpg">
+    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/add_announcement.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (reuse navbar) -->
+    <header class="site-header" id="mainHeader">
+      <div class="logo">Dept. of IFT</div>
+
+      <!-- Hamburger for Mobile -->
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="navbar" id="navbarMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="announcements.html" class="active">Announcements</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="timetable.html">Timetable</a></li>
+          <li><a href="results.html">Results</a></li>
+
+          <!-- Auth Buttons -->
+          <li><a href="login.html" class="login-btn">Login</a></li>
+          <li><a href="#" class="logout-btn" style="display: none;">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-container">
+        <h2>Post New Announcement</h2>
+
+        <form id="announcementForm" class="admin-form">
+            <input type="text" id="title" placeholder="Announcement Title" required />
+            <textarea id="content" placeholder="Announcement Details..." required></textarea>
+            <input type="text" id="posted_by" placeholder="Posted By" required />
+            <select id="category">
+                <option value="general">General</option>
+                <option value="exam">Exam</option>
+                <option value="event">Event</option>
+            </select>
+            <button type="submit" class="btn">Post Announcement</button>
+        </form>
+        <p id="message"></p>
+    </main>
+
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Department of IT, FUTO</p>
+  </footer>
+
+  <script src="./scripts/global.js" defer></script>
+</body>
+</html>

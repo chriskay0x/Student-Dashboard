@@ -1,0 +1,15 @@
+# Ignore backend folder completely
+backend/
+
+# Ignore any PHP files in root (if any)
+*.php
+
+# Ignore local environment files (just in case)
+.env
+
+# Ignore macOS/Windows system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs or temporary files
+*.log
