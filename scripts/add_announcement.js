@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const res = await fetch("http://localhost/studentboard/backend/add_announcement.php", {
+      const res = await fetch("https://studentboard-api.onrender.com/backend/add_announcement.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, content, posted_by, category }),
